@@ -1,3 +1,4 @@
+        <?php include("model/about.model.php"); ?>
 
         
         <?php include("nav.inc.php"); ?>

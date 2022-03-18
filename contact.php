@@ -1,3 +1,4 @@
+        <?php include("model/contact.model.php"); ?>
 
         
         <?php include("nav.inc.php"); ?>
