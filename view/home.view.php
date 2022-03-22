@@ -12,7 +12,7 @@
 
                 <!-- Post preview-->
                 <div class="post-preview">
-                    <a href="post.php">
+                    <a href="post.php?article=<?= $onedata["post_ID"] ?>">
                         <h2 class="post-title"><?= $onedata["post_title"] ?></h2>
                     </a>
                     <h3 class="post-subtitle"><?= $onedata["post_content"] //substr($onedata["post_content"], 0, 200) ?> [...]</h3>
