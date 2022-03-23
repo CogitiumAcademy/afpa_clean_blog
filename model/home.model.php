@@ -7,7 +7,7 @@ include("model/pdo.inc.php");
 
 try {
     $query = "
-    SELECT post_ID, post_date, LEFT(post_content, " . TRONCATURE . ") AS post_content, post_title, display_name, cat_descr 
+    SELECT post_ID, post_date, LEFT(post_content, " . TRONCATURE . ") AS post_content, post_title, post_img_url, display_name, cat_descr 
     FROM blog_posts
     
     INNER JOIN blog_users
@@ -29,8 +29,8 @@ try {
 }
 
 $bg = 'assets/img/home-bg.jpg';
-$title = 'Blog de surf';
-$subtitle = 'Le meilleur sport de glisse !';
+$header_title = 'Blog de surf';
+$header_subtitle = 'Le meilleur sport de glisse !';
 
 /*
 $title_art_1 = 'Planche de surf';

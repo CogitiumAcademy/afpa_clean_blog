@@ -7,3 +7,4 @@ define("DB_PASSWORD", "");
 define("DB_CHARSET", "utf8");
 
 define("TRONCATURE", 200);
+define("TRONCATURE_HEADER", 31);

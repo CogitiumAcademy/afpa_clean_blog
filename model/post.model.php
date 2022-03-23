@@ -7,7 +7,7 @@ include("model/pdo.inc.php");
 
 try {
     $query = "
-    SELECT post_date, post_content, post_title, display_name, cat_descr 
+    SELECT post_date, post_content, post_title, post_img_url, display_name, cat_descr 
     FROM blog_posts
     
     INNER JOIN blog_users

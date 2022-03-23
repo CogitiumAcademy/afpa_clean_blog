@@ -15,6 +15,9 @@
                     <a href="post.php?article=<?= $onedata["post_ID"] ?>">
                         <h2 class="post-title"><?= $onedata["post_title"] ?></h2>
                     </a>
+
+                    <img src="<?= $onedata["post_img_url"] ?>" alt="">
+
                     <h3 class="post-subtitle"><?= $onedata["post_content"] //substr($onedata["post_content"], 0, 200) ?> [...]</h3>
                     <p class="post-meta">
                         Rédigé par

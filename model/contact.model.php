@@ -1,4 +1,4 @@
 <?php
 $bg = 'assets/img/contact-bg.jpg';
-$title = 'Blog de surf';
-$subtitle = 'Contactez-nous';
+$header_title = 'Blog de surf';
+$header_subtitle = 'Contactez-nous';
