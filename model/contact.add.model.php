@@ -4,14 +4,35 @@ include("config/config.inc.php");
 include("model/pdo.inc.php");
 
 try {
+    /* Version sans requete préparée
+
     //var_dump($_POST);
+    /*
     $query = "INSERT INTO blog_contacts
-        (contact_name2, contact_email, contact_phone, contact_message)
+        (contact_name, contact_email, contact_phone, contact_message)
         VALUES
         ('" . addslashes($_POST["name"]) . "', '" . $_POST["email"] . "', '" . $_POST["phone"] . "', '" . addslashes($_POST["message"]) ."')";
-
-    //die($query);
     $req = $pdo->exec($query);
+    */
+
+
+    // Version requete préparée
+
+    $query = "INSERT INTO blog_contacts
+        (contact_name, contact_email, contact_phone, contact_message)
+        VALUES
+        (:contact_name, :contact_email, :contact_phone, :contact_message)";
+    //die($query);
+    
+    $curseur = $pdo->prepare($query);
+
+    $curseur->bindValue(':contact_name', $_POST["name"], PDO::PARAM_STR);
+    $curseur->bindValue(':contact_email', $_POST["email"], PDO::PARAM_STR);
+    $curseur->bindValue(':contact_phone', $_POST["phone"], PDO::PARAM_STR);
+    $curseur->bindValue(':contact_message', $_POST["message"], PDO::PARAM_STR);
+
+    $curseur->execute();
+
 } catch (Exception $e) {
     //die("Erreur MySQL : " . $e->getMessage());
     header("Location: index.php?erreur=1");
