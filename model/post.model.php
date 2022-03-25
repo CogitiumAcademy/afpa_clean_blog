@@ -49,8 +49,8 @@ try {
     $curseur->setFetchMode(PDO::FETCH_ASSOC);
     $data = $curseur->fetch();
 
-    var_dump($data);
-    exit;
+    //var_dump($data);
+    //exit;
 
 
 } catch(Exception $e) {
